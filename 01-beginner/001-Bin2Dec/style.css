@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(245, 255, 245);
+}
+
+header {
+    text-align: center;
+}
+
+.form-control {
+    font-family: monospace;
+    text-align: center;
+    text-transform: uppercase;
+
+    &.invalid {
+        color: red;
+    }
+}
+
+.btn-copy {
+    position: relative;
+}
