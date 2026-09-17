@@ -2,6 +2,7 @@ const inputDec = document.getElementById('input-dec');
 const inputBin = document.getElementById('input-bin');
 const inputOct = document.getElementById('input-oct');
 const inputHex = document.getElementById('input-hex');
+const allInputs = document.querySelectorAll('input');
 
 const conversor = {
 
@@ -75,6 +76,12 @@ const conversor = {
     }
 }
 
+function clearAllInputs() {
+    allInputs.forEach(input => {
+        input.value = '';
+    });
+}
+
 function alertInvalidDigit(input) {
     input.classList.add('invalid');
     setTimeout(() => {
@@ -124,49 +131,83 @@ function numberToHex(n) {
     }
 }
 
-inputDec.addEventListener('keypress', (e) => {
-    if (e.key < '0' || e.key > '9') {
+inputDec.addEventListener('beforeinput', e => {
+    if (e.data < '0' || e.data > '9') {
         e.preventDefault();
         alertInvalidDigit(inputDec);
         return;
     }
-    const dec = inputDec.value + e.key;
+});
+
+inputDec.addEventListener('input', (e) => {
+    const dec = parseInt(inputDec.value.trim());
+    if (!dec) {
+        clearAllInputs();
+        return;
+    }
+    inputDec.value = dec;
     inputBin.value = conversor.decToBin(dec);
     inputOct.value = conversor.decToOct(dec);
     inputHex.value = conversor.decToHex(dec);
 });
 
-inputBin.addEventListener('keypress', (e) => {
-    if (e.key < '0' || e.key > '1') {
+inputBin.addEventListener('beforeinput', e => {
+    if (e.data < '0' || e.data > '1') {
         e.preventDefault();
         alertInvalidDigit(inputBin);
         return;
     }
-    const bin = inputBin.value + e.key;
+});
+
+inputBin.addEventListener('input', e => {
+    const bin = inputBin.value.trim();
+    if (!bin) {
+        clearAllInputs();
+        return;
+    }
     const dec = conversor.binToDec(bin);
     inputDec.value = dec;
     inputOct.value = conversor.decToOct(dec);
+    inputHex.value = conversor.decToHex(dec);
 });
 
-inputOct.addEventListener('keypress', (e) => {
-    if (e.key < '0' || e.key > '7') {
+inputOct.addEventListener('beforeinput', e => {
+    if (e.data < '0' || e.data > '7') {
         e.preventDefault();
         alertInvalidDigit(inputOct);
         return;
     }
-    const dec = conversor.octToDec(inputOct.value + e.key);
-    inputDec.value = dec;
-    inputBin.value = conversor.decToBin(dec);
 });
 
-inputHex.addEventListener('keypress', (e) => {
-    const key = e.key.toUpperCase();
+inputOct.addEventListener('input', e => {
+    const oct = inputOct.value.trim();
+    if (!oct) {
+        clearAllInputs();
+        return;
+    }
+    const dec = conversor.octToDec(oct);
+    inputDec.value = dec;
+    inputBin.value = conversor.decToBin(dec);
+    inputHex.value = conversor.decToHex(dec);
+});
+
+inputHex.addEventListener('beforeinput', e => {
+    const key = typeof e.data === 'string' ? e.data.toUpperCase() : null;
+    console.log(key);
     if ((key < '0' || key > '9') && ((key < 'A' || key > 'F'))) {
         e.preventDefault();
         alertInvalidDigit(inputHex);
         return;
     }
-    const dec = conversor.hexToDec(inputHex.value + e.key);
+});
+
+inputHex.addEventListener('input', e => {
+    const hex = inputHex.value.trim();
+    if (!hex) {
+        clearAllInputs();
+        return;
+    }
+    const dec = conversor.hexToDec(hex);
     inputDec.value = dec;
     inputBin.value = conversor.decToBin(dec);
     inputOct.value = conversor.decToOct(dec);
