@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Border Radius Previewer</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Border Radius Previewer</h1>
+        <form id="form">
+            <div class="row">
+                <div class="col-12">
+                    <div class="previewer">
+                        <div class="row-top">
+                            <div class="cell col-left">
+                                <input type="number" min="0" value="5" class="input-border" id="input-border-tl" />
+                            </div>
+                            <div class="cell col-middle">
+                                <span class="unity" style="float: left">
+                                    <label>
+                                        <input type="radio" class="radio-unity" name="unity_tl" value="px" checked />px
+                                    </label>
+                                    <label>
+                                        <input type="radio" class="radio-unity" name="unity_tl" value="percent" />%
+                                    </label>
+                                </span>
+                                <span class="unity" style="float: right">
+                                    <label>
+                                        <input type="radio" class="radio-unity" name="unity_tr" value="px" checked />px
+                                    </label>
+                                    <label>
+                                        <input type="radio" class="radio-unity" name="unity_tr" value="percent" />%
+                                    </label>
+                                </span>
+                            </div>
+                            <div class="cell col-right">
+                                <input type="number" min="0" value="5" class="input-border" id="input-border-tr" />
+                            </div>
+                        </div>
+                        <div class="row-middle">
+                            <div class="cell col-left"></div>
+                            <div class="cell col-middle">
+                                <div id="model"></div>
+                            </div>
+                            <div class="cell col-right"></div>
+                        </div>
+                        <div class="row-bottom">
+                            <div class="cell col-left">
+                                <input type="number" min="0" value="5" class="input-border" id="input-border-bl" />
+                            </div>
+                            <div class="cell col-middle">
+                                <span class="unity" style="float: left">
+                                    <label>
+                                        <input type="radio" class="radio-unity" name="unity_bl" value="px" checked />px
+                                    </label>
+                                    <label>
+                                        <input type="radio" class="radio-unity" name="unity_bl" value="percent" />%
+                                    </label>
+                                </span>
+                                <span class="unity" style="float: right">
+                                    <label>
+                                        <input type="radio" class="radio-unity" name="unity_br" value="px" checked />px
+                                    </label>
+                                    <label>
+                                        <input type="radio" class="radio-unity" name="unity_br" value="percent" />%
+                                    </label>
+                                </span>
+                            </div>
+                            <div class="cell col-right">
+                                <input type="number" min="0" value="5" class="input-border" id="input-border-br" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h5>HTML</h5>
+                    <textarea id="html-code" disabled class="code">&lt;div class="rectangle"&gt;&lt;/div&gt;</textarea>
+                    <button id="html-copy" class="btn-copy">Copy HTML</button>
+                    <span id="html-copy-alert" class="alert" hidden>Copied!</span>
+                </div>
+                <div class="col-6">
+                    <h5>CSS</h5>
+                    <textarea disabled class="code" id="css-code"></textarea>
+                    <button id="css-copy" class="btn-copy">Copy CSS</button>
+                    <span id="css-copy-alert" class="alert" hidden>Copied!</span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
+
+<div class="rectangle"></div>

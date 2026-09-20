@@ -6,6 +6,7 @@ Solutions for [App Ideas Collection](https://github.com/florinpop17/app-ideas).
 
 ### Tier-1: Beginner Projecs
 
-|Project                                                                                           |Solution                                 |
-|--------------------------------------------------------------------------------------------------|-----------------------------------------|
-|[Bin2Dec](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md)|[001-Bin2Dec](./01-beginner/001-Bin2Dec)  |
+|# |Project                                                                                                           |Solution                                                                |
+|--|------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
+|01|[Bin2Dec](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md)                |[01-Bin2Dec](./01-beginner/01-Bin2Dec)                                |
+|02|[Border-radius Previewer](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md)|[02-border-radius-previewer](./01-beginner/02-border-radius-previewer)|

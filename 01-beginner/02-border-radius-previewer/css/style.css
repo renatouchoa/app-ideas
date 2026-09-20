@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+    }
+}
+
+.previewer {
+    div {
+        padding: 3px;
+    }
+
+    .cell {
+        -border: 1px solid blue;
+    }
+
+    .row-top,
+    .row-middle,
+    .row-bottom {
+        display: flex;
+
+        .col-left,
+        .col-right {
+            width: 100px;
+        }
+
+        .col-middle {
+            width: 100%;
+        }
+    }
+
+    .input-border {
+        width: 100%;
+        padding: 6px;
+        text-align: center;
+        border: 1px solid #666;
+    }
+
+    #input-border-tl {
+        border-radius: 10px 0 0 0;
+    }
+
+    #input-border-tr {
+        border-radius: 0 10px 0 0;
+    }
+
+    #input-border-br {
+        border-radius: 0 0 10px 0;
+    }
+
+    #input-border-bl {
+        border-radius: 0 0 0 10px;
+    }
+
+    #model {
+        background-color: aquamarine;
+        border: 3px solid green;
+        height: 120px;
+    }
+}
+
+.code {
+    resize: none;
+    font-family: monospace;
+    width: 100%;
+    padding: 20px 5px;
+    height: 100px;
+}
+
+button.btn-copy {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+.unity {
+
+    padding: 6px 0;
+
+    label {
+        margin-right: 10px;
+
+        input {
+            margin-right: 6px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        .row {
+            flex-direction: column;
+
+            .col-12,
+            .col-6 {
+                width: 100%;
+            }
+        }
+    }
+}
