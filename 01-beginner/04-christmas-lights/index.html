@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Christmas Lights</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Christmas Ligths</h1>
+        <div class="row">
+            <div class="col">
+                <button id="toggle" class="btn btn-toggle-on"><span class="state">●</span> On/Off</button>
+            </div>
+            <div class="col">
+                <span class="speed">
+                    Speed:
+                    <button class="btn btn-speed" id="speed-dec">-</button>
+                    <span id="speed-value">1</span>
+                    <button class="btn btn-speed" id="speed-inc">+</button>
+                </span>
+            </div>
+        </div>
+        <ul id="lights">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
