@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>CauseEffect</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CauseEffect App</h1>
+        <div class="causeeffect">
+            <div class="cause">
+                <ul id="people">
+                    <li>
+                        <a href="#">André</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Bruna</a>
+                    </li>
+                    <li>
+                        <a href="#">Carlos</a>
+                    </li>
+                    <li>
+                        <a href="#">Débora</a>
+                    </li>
+                    <li>
+                        <a href="#">Emília</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="effect">
+                <div id="person-msg">
+                    Select a person to see their details.
+                </div>
+                <div id="person-container" hidden>
+                    <h2>Person</h2>
+                    <dl id="person">
+                        <div class="row">
+                            <div class="col-12">
+                                <dt>Name</dt>
+                                <dd id="person-name"></dd>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <dt>Street</dt>
+                                <dd id="person-street"></dd>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <dt>City</dt>
+                                <dd id="person-city"></dd>
+                            </div>
+                            <div class="col-2">
+                                <dt>State</dt>
+                                <dd id="person-state"></dd>
+                            </div>
+                            <div class="col-5">
+                                <dt>Country</dt>
+                                <dd id="person-country"></dd>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <dt>Telephone</dt>
+                                <dd id="person-telephone"></dd>
+                            </div>
+                            <div class="col-6">
+                                <dt>Birthday</dt>
+                                <dd id="person-birthday"></dd>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

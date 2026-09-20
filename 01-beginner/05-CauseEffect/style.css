@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    ;
+}
+
+body {
+    padding: 10px;
+    background-color: #FAFAFA;
+}
+
+h1 {
+    text-align: center;
+    font-size: 200%;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 150%;
+    font-weight: lighter;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+
+    .causeeffect {
+        margin-top: 10px;
+        display: flex;
+        border-radius: 10px;
+
+        .cause {
+            border-width: 1px 0 1px 1px;
+            border-color: #BBB;
+            border-style: solid;
+            border-radius: 10px 0 0 10px;
+            padding: 10px 0 10px 10px;
+            width: 160px;
+            background-color: #DDD;
+        }
+
+        .effect {
+            border-width: 1px 1px 1px 0;
+            border-color: #BBB;
+            border-style: solid;
+            border-radius: 0 10px 10px 0;
+            width: 100%;
+            padding: 10px;
+        }
+    }
+}
+
+.row {
+    display: flex;
+
+    .col-1 {
+        width: 8.333333%;
+    }
+
+    .col-2 {
+        width: 16.666666%
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.333333%
+    }
+
+    .col-5 {
+        width: 41.666666%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.333333%;
+    }
+
+    .col-8 {
+        width: 66.666666%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.333333%;
+    }
+
+    .col-11 {
+        width: 91.666666%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+#people {
+    list-style-type: none;
+
+    li {
+        margin-bottom: 2px;
+
+        a {
+            color: #333;
+            display: block;
+            text-decoration: none;
+            padding: 10px 10px 10px 20px;
+            border-radius: 5px 0 0 5px;
+            border-width: 0 0 0 1px;
+            border-color: transparent;
+            border-style: solid;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #EEE;
+            }
+        }
+
+        &.active {
+            a {
+                background-color: #FFF;
+                border-color: #BBB;
+            }
+        }
+    }
+}
+
+#person {
+    dt {
+        margin-top: 10px;
+        color: #999;
+        font-size: 80%;
+        font-style: italic;
+    }
+
+    dd {
+        padding: 2px 0;
+
+        &#person-name {
+            font-weight: bold;
+        }
+    }
+}
+
+#person-msg {
+    font-style: italic;
+    color: #999;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 650px) {
+    .container {
+        width: 100%;
+    }
+}

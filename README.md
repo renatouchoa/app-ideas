@@ -12,3 +12,4 @@ Solutions for [App Ideas Collection](https://github.com/florinpop17/app-ideas).
 |02|[Border-radius Previewer](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Border-Radius-Previewer.md)|[02-border-radius-previewer](./01-beginner/02-border-radius-previewer)  |
 |03|[Calculator](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Calculator-App.md)                      |_coming soon_                                                           |
 |04|[Christmas Lights](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Christmas-Lights-App.md)          |[04-christmas-lights](./01-beginner/04-christmas-lights/)               |
+|05|[CauseEffect](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Cause-Effect-App.md)                   |[05-CauseEffect](./01-beginner/05-CauseEffect/)                         |
